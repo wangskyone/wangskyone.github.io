@@ -1,0 +1,30 @@
+url: "https://wangskyone.github.io"
+baseurl: ""
+lang: en-US
+
+# Basic information
+title: Tianyi Wang
+position: Ph.D. Student
+affiliation: Chengdu Institute of Computer Applications, Chinese Academy of Sciences
+affiliation_link: https://english.ucas.ac.cn/index.php/academics/cas-institutes/580-chengdu-branch/2799-chengdubranch002
+email: wangtianyi22@mails.ucas.ac.cn
+
+# Search engine optimization
+keywords: Tianyi Wang, test-time adaptation, domain adaptation, robot learning, embodied AI
+description: Personal homepage of Tianyi Wang, a Ph.D. student working on test-time adaptation, domain adaptation, robot learning, and embodied AI.
+canonical: https://wangskyone.github.io/
+
+# Academic profiles
+google_scholar: https://scholar.google.com.hk/citations?user=jLVSybIAAAAJ&hl=en
+github_link: https://github.com/wangskyone
+
+# Images
+avatar: /assets/img/profile-travel.jpg
+favicon: /assets/img/favicon.svg
+favicon_dark: /assets/img/favicon-dark.svg
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - LICENSE

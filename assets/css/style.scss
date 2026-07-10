@@ -1,0 +1,380 @@
+---
+---
+
+@import "minimal-light";
+
+/* ─────────────────────────────────────────────
+   CSS Variables  (Inter loaded via <link> in homepage.html)
+───────────────────────────────────────────── */
+:root {
+  --vr-navy:      #0f172a;
+  --vr-blue:      #2563eb;
+  --vr-blue-soft: #3b82f6;
+  --vr-gray:      #64748b;
+  --vr-gray-lt:   #94a3b8;
+  --vr-border:    #e2e8f0;
+  --vr-card-bg:   #f8fafc;
+  --vr-shadow:    0 1px 4px rgba(15,23,42,0.08), 0 4px 16px rgba(15,23,42,0.05);
+  --vr-shadow-hv: 0 4px 20px rgba(37,99,235,0.12), 0 1px 6px rgba(15,23,42,0.08);
+}
+
+/* ── Typography ── */
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: #374151;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Inter', sans-serif;
+}
+
+/* ── h2: full-width gradient divider (V-Reflection style) ── */
+h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--vr-navy);
+  margin: 2.4rem 0 1rem;
+  padding-bottom: 0;
+  border-bottom: none;
+  white-space: nowrap;
+}
+h2::after {
+  content: '';
+  flex: 1;
+  height: 2px;
+  background: linear-gradient(90deg, var(--vr-blue) 0%, var(--vr-border) 100%);
+  border-radius: 2px;
+}
+
+h1 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--vr-navy);
+}
+
+/* ── Links ── */
+a {
+  color: var(--vr-blue);
+  transition: color 0.15s ease;
+}
+a:hover {
+  color: #1d4ed8;
+}
+
+/* ── Sidebar / Header ── */
+header {
+  padding-top: 3rem;
+  border-right: 1px solid var(--vr-border);
+  padding-right: 1.8rem;
+}
+
+header h1 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--vr-navy);
+  margin-bottom: 4px;
+}
+
+position {
+  display: block;
+  font-size: 0.82rem;
+  color: var(--vr-gray);
+  font-weight: 400;
+  margin-bottom: 2px;
+}
+
+autocolor {
+  display: block;
+  color: var(--vr-blue);
+  font-weight: 500;
+  font-size: 0.82rem;
+  line-height: 1.6;
+}
+
+email {
+  font-family: 'Inter', monospace;
+  font-size: 0.78rem;
+  color: var(--vr-gray);
+}
+
+.social-icons a {
+  color: var(--vr-navy) !important;
+  opacity: 0.65;
+  transition: opacity 0.15s, transform 0.15s;
+}
+.social-icons a:hover {
+  opacity: 1;
+  transform: translateY(-2px) scale(1.1);
+  background-color: transparent;
+  color: var(--vr-blue) !important;
+}
+
+.image.avatar {
+  display: block;
+  width: 200px;
+  margin: 0 auto 1rem;
+}
+
+.image.avatar img {
+  display: block;
+  border-radius: 50%;
+  border: 2px solid var(--vr-border);
+  box-shadow: 0 2px 12px rgba(15,23,42,0.12);
+  padding: 4px;
+  width: 100%;
+  height: auto;
+  box-sizing: border-box;
+}
+
+/* ── Section (right panel) ── */
+section {
+  padding-top: 3rem;
+}
+
+/* ── About Me intro paragraph card ── */
+section > p:first-of-type {
+  font-size: 0.93rem;
+  line-height: 1.8;
+  color: #1e293b;
+  background: var(--vr-card-bg);
+  border-left: 3px solid var(--vr-blue);
+  padding: 12px 16px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1.6rem;
+}
+
+/* ── List timeline dots (Internships / Education / Services) ── */
+section ul {
+  padding-left: 0;
+  list-style: none;
+}
+section ul li {
+  position: relative;
+  padding-left: 1.3em;
+  line-height: 1.75;
+  margin-bottom: 0.15rem;
+}
+section ul li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--vr-blue-soft);
+  flex-shrink: 0;
+}
+/* nested list: smaller dot */
+section ul li ul {
+  margin-top: 0.1rem;
+}
+section ul li ul li::before {
+  width: 3px;
+  height: 3px;
+  top: 0.68em;
+  background: var(--vr-gray-lt);
+}
+
+/* ── Paper entry cards ── */
+.publications ol.bibliography li {
+  background: var(--vr-card-bg);
+  border: 1px solid var(--vr-border);
+  border-radius: 10px;
+  padding: 14px 16px 12px;
+  margin-bottom: 14px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  box-shadow: var(--vr-shadow);
+}
+.publications ol.bibliography li:hover {
+  box-shadow: var(--vr-shadow-hv);
+  transform: translateY(-1px);
+}
+
+.publication-figure {
+  position: relative;
+  flex: 0 0 36%;
+  max-width: 225px;
+  margin-right: 16px;
+}
+
+.publications ol.bibliography li .publication-figure .teaser {
+  display: block;
+  width: 100%;
+  height: 130px;
+  margin: 0;
+  object-fit: contain;
+  background: #fff;
+}
+
+.publication-figure .badge {
+  display: inline-block;
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  padding: 3px 7px;
+  border-radius: 3px;
+  background: var(--vr-navy);
+  color: #fff !important;
+  font-family: 'Inter', sans-serif;
+  font-size: 9px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  line-height: 1;
+}
+
+.publication-details {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Paper title */
+.publications ol.bibliography li .title {
+  font-weight: 600;
+  font-size: 0.93rem;
+  line-height: 1.4;
+  color: var(--vr-navy);
+}
+.publications ol.bibliography li .title a {
+  color: var(--vr-navy);
+}
+.publications ol.bibliography li .title a:hover {
+  color: var(--vr-blue);
+}
+
+/* Author line */
+.publications ol.bibliography li .author {
+  font-size: 0.82rem;
+  color: var(--vr-gray);
+  margin-top: 2px;
+}
+.publications ol.bibliography li .author strong {
+  color: var(--vr-navy);
+  font-weight: 600;
+}
+
+/* Venue/periodical */
+.publications ol.bibliography li .periodical {
+  font-size: 0.78rem;
+  color: var(--vr-gray-lt);
+  margin-top: 2px;
+}
+
+/* Link buttons */
+.publications ol.bibliography li .links a.btn {
+  font-size: 11px;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  padding: 3px 10px;
+  border-radius: 5px;
+  border: 1.5px solid var(--vr-border);
+  color: var(--vr-gray);
+  background: #fff;
+  transition: border-color 0.15s, color 0.15s, background 0.15s;
+  margin-right: 4px;
+}
+.publications ol.bibliography li .links a.btn:hover {
+  border-color: var(--vr-blue);
+  color: var(--vr-blue);
+  background: #eff6ff;
+}
+
+/* Venue badge (CVPR / NeurIPS …) */
+.publications ol.bibliography li .abbr abbr {
+  background: var(--vr-navy);
+  font-family: 'Inter', sans-serif;
+  font-size: 9.5px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  border-radius: 3px;
+  padding: 2px 7px;
+}
+
+/* Teaser image */
+.publications ol.bibliography li .teaser {
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(15,23,42,0.1);
+  object-fit: cover;
+}
+
+/* ── Dark mode ── */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --vr-navy:      #f1f5f9;
+    --vr-blue:      #60a5fa;
+    --vr-blue-soft: #93c5fd;
+    --vr-gray:      #94a3b8;
+    --vr-gray-lt:   #64748b;
+    --vr-border:    #1e293b;
+    --vr-card-bg:   #0f172a;
+    --vr-shadow:    0 1px 4px rgba(0,0,0,0.3);
+    --vr-shadow-hv: 0 4px 20px rgba(96,165,250,0.15);
+  }
+  body { color: #cbd5e1; }
+  h2 { color: #f1f5f9; }
+  h2::after { background: linear-gradient(90deg, #60a5fa 0%, #1e293b 100%); }
+  autocolor { color: #60a5fa; }
+  .social-icons a { color: #cbd5e1 !important; }
+  .image.avatar img { border-color: #1e293b; }
+  header { border-right-color: #1e293b; }
+  section > p:first-of-type {
+    color: #cbd5e1;
+    background: #0f172a;
+    border-left-color: #60a5fa;
+  }
+  .publications ol.bibliography li .links a.btn {
+    background: #1e293b;
+    border-color: #334155;
+    color: #94a3b8;
+  }
+  .publications ol.bibliography li .links a.btn:hover {
+    border-color: #60a5fa;
+    color: #60a5fa;
+    background: #172554;
+  }
+  .publications ol.bibliography li .title a { color: #f1f5f9; }
+  .publications ol.bibliography li .title a:hover { color: #60a5fa; }
+  .publications ol.bibliography li .author strong { color: #f1f5f9; }
+}
+
+/* Keep the profile column compact when the layout stacks on narrow screens. */
+@media screen and (max-width: 960px) {
+  header {
+    padding: 1.5rem 0 2rem;
+    border-right: 0;
+    border-bottom: 1px solid var(--vr-border);
+  }
+
+  section {
+    padding-top: 1rem;
+  }
+
+  .image.avatar {
+    width: 180px;
+  }
+
+  autocolor {
+    max-width: 24rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .publication-figure {
+    max-width: none;
+    margin: 0 0 14px;
+  }
+
+  .publications ol.bibliography li .publication-figure .teaser {
+    width: 100%;
+    height: 180px;
+  }
+}
