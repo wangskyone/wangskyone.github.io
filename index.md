@@ -12,8 +12,6 @@ I am a Ph.D. student in Computer Science and Technology at the [Chengdu Institut
 - Domain Adaptation
 - Robot Learning and Embodied AI
 
-{% include preprints.md %}
-
 {% include publications.md %}
 
 ## Internships
