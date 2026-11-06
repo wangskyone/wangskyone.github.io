@@ -16,7 +16,8 @@ I am a Ph.D. student in Computer Science and Technology at the [Chengdu Institut
 
 ## Internships
 
-- **2026.04 – Present:** [**HAI LAB**](https://github.com/EIT-HAI), [Eastern Institute of Technology, Ningbo](https://www.eitech.edu.cn/en/)
+- **2026.04 – Present:** [**HAI LAB**](https://github.com/EIT-HAI), [**Eastern Institute of Technology, Ningbo**](https://www.eitech.edu.cn/en/)
+- **2024.04 – 2025.06:** [**The Chinese University of Hong Kong (CUHK)**](https://www.cuhk.edu.hk/english/), Remote Research Collaboration
 
 ## Academic Services
 
