@@ -96,8 +96,7 @@
       <div class="author">Yanxiao Zhao, Yangge Qian, <strong>Tianyi Wang</strong>, Jingyang Shan, Xiaolin Qin</div>
       <div class="periodical"><em>AutoRL Workshop @ <abbr title="International Conference on Machine Learning">ICML</abbr> 2024.</em></div>
       <div class="links">
-        <a href="https://arxiv.org/abs/2403.00673" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">arXiv</a>
-        <a href="https://arxiv.org/pdf/2403.00673" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">PDF</a>
+        <a href="https://arxiv.org/pdf/2403.00673" class="btn btn-sm z-depth-0" role="button" target="_blank" rel="noopener">Paper</a>
       </div>
       <div class="paper-tags">
         <span class="paper-tag">Reinforcement Learning</span>
