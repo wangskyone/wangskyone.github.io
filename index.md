@@ -21,6 +21,7 @@ I am a Ph.D. student in Computer Science and Technology at the [Chengdu Institut
 
 ## Academic Services
 
+- Journal Reviewer: IEEE Robotics and Automation Letters (RA-L)
 - Conference Reviewer: IJCNN
 
 ## Education
